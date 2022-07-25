@@ -9,6 +9,8 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
+
 
 import com.test.logparser.processor.ILogProcessor;
 
@@ -19,6 +21,7 @@ import ch.qos.logback.classic.Logger;
  * @author pakumar
  *
  */
+@EnableAsync
 @SpringBootApplication
 public class LogParserApplication implements ApplicationRunner{
     private static final Logger logger = (Logger) LoggerFactory.getLogger(LogParserApplication.class);
